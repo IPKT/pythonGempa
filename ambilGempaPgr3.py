@@ -1,5 +1,6 @@
 import requests
 import time
+from hehe import url
 
 def ambilDataGempaPgr3():
     print("## DATA GEMPA PGR3 ##")
@@ -46,7 +47,8 @@ def kirimData(id, infogempa, tabel,id_shakemap=""):
     # url = 'http://182.23.56.142:90/geofisikaDNP/profileWeb/simpan_gempapgr3'
     # url = 'http://182.23.56.142:90/stageof-bali/web/simpan2'
     # url = 'https://stageof-bali.bmkg.go.id/web/simpan2'
-    url = 'http://182.16.249.163/web/simpan2'
+    # url = 'http://182.16.249.163/web/simpan2'
+    # url = 'https://stageof-bali.devbmkg.my.id/web/simpan2'
     dataKirim = id + "==" + infogempa+"=="+ id_shakemap +"=="+ tabel
     myobj = {'gempa': dataKirim}
     x = requests.post(url, data=myobj)
